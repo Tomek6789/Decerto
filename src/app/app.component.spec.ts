@@ -1,12 +1,22 @@
+import { Renderer2 } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AccordeonComponent } from './accordeon/accordeon.component';
 import { AppComponent } from './app.component';
+import { ProductComponent } from './product/product.component';
+import { TooltipDirective } from './tooltip/tooltip.directive';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        AccordeonComponent,
+        ProductComponent,
+        TooltipDirective,
       ],
+      imports: [ReactiveFormsModule],
+      providers: [Renderer2]
     }).compileComponents();
   });
 
